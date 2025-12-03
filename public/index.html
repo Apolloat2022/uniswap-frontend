@@ -1,39 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="fortmatic-site-verification" content="j93LgcVZk79qcgyo" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Uniswap Exchange</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root" />
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+{
+  "name": "uniswap",
+  "description": "Uniswap Exchange Protocol",
+  "version": "0.1.0",
+  "homepage": "https://apolloat2022.github.io/uniswap-frontend",
+  "private": true,
+  "dependencies": {
+    "@reach/dialog": "^0.2.8",
+    "@reach/tooltip": "^0.2.0",
+    "@uniswap/sdk": "^1.0.0-beta.4",
+    "@web3-react/core": "^6.0.2",
+    "@web3-react/fortmatic-connector": "^6.0.2",
+    "@web3-react/injected-connector": "^6.0.3",
+    "@web3-react/network-connector": "^6.0.4",
+    "@web3-react/portis-connector": "^6.0.2",
+    "@web3-react/walletconnect-connector": "^6.0.2",
+    "@web3-react/walletlink-connector": "^6.0.2",
+    "copy-to-clipboard": "^3.2.0",
+    "escape-string-regexp": "^2.0.0",
+    "ethers": "^4.0.36",
+    "history": "^4.9.0",
+    "i18next": "^15.0.9",
+    "i18next-browser-languagedetector": "^3.0.1",
+    "i18next-xhr-backend": "^2.0.1",
+    "jazzicon": "^1.5.0",
+    "polished": "^3.3.2",
+    "qrcode.react": "^0.9.3",
+    "react": "^16.8.6",
+    "react-device-detect": "^1.6.2",
+    "react-dom": "^16.8.6",
+    "react-feather": "^1.1.6",
+    "react-ga": "^2.5.7",
+    "react-i18next": "^10.7.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^3.0.1",
+    "react-spring": "^8.0.27",
+    "react-switch": "^5.0.1",
+    "react-use-gesture": "^6.0.14",
+    "styled-components": "^4.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "lint:base": "eslint './src/**/*.{js,jsx}'",
+    "format:base": "prettier './src/**/*.{js,jsx,scss}'",
+    "fix:lint": "npm run lint:base -- --fix",
+    "fix:format": "npm run format:base -- --write",
+    "fix:all": "npm run fix:lint && npm run fix:format",
+    "check:lint": "npm run lint:base",
+    "check:format": "npm run format:base -- --check",
+    "check:all": "npm run check:lint && npm run check:format"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "prettier": "^1.17.0"
+  }
+}
